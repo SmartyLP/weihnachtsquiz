@@ -1,23 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
 <head>
-  <title>Live Quiz</title>
+  <meta charset="UTF-8">
+  <title>Weihnachtsquiz</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="login">
-    <input id="name" placeholder="Twitch / YT Name">
-    <button onclick="join()">Teilnehmen</button>
-  </div>
 
-  <div id="quiz" hidden>
-    <h2 id="question">Warte auf nächste Frage…</h2>
-    <div id="options"></div>
-    <div id="timer"></div>
-  </div>
+<div id="login">
+  <h1>Weihnachtsquiz</h1>
+  <input id="name" placeholder="Twitch / YT Name">
+  <button onclick="join()">Teilnehmen</button>
+</div>
 
-  <script src="questions.js"></script>
-  <script src="script.js"></script>
+<div id="quiz" style="display:none;">
+  <h2 id="question">Warte auf nächste Frage…</h2>
+  <div id="options"></div>
+  <div id="timer"></div>
+</div>
+
+<script src="questions.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
-
