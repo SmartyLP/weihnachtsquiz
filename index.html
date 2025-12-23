@@ -1,1 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Live Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="login">
+    <input id="name" placeholder="Twitch / YT Name">
+    <button onclick="join()">Teilnehmen</button>
+  </div>
+
+  <div id="quiz" hidden>
+    <h2 id="question">Warte auf nächste Frage…</h2>
+    <div id="options"></div>
+    <div id="timer"></div>
+  </div>
+
+  <script src="questions.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
 
