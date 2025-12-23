@@ -1,1 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quiz Admin</title>
+</head>
+<body>
+<h1>Admin</h1>
+
+<button onclick="nextQuestion()">Nächste Frage</button>
+<button onclick="drawWinner()">Zufallsgewinner</button>
+
+<script>
+const API = "https://weihnachtsquiz-live.smarty100.workers.dev";
+
+function nextQuestion() {
+  fetch(API + "/start");
+}
+
+function drawWinner() {
+  fetch(API + "/draw")
+    .then(r => r.json())
+    .then(d => alert("Gewinner: " + d.winner));
+}
+</script>
+</body>
+</html>
 
