@@ -1,1 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body style="font-family:sans-serif;color:white;background:transparent;">
+<h2 id="board"></h2>
+
+<script>
+const API = "https://weihnachtsquiz-live.smarty100.workers.dev";
+
+setInterval(async () => {
+  const s = await fetch(API + "/status").then(r => r.json());
+  const names = Object.keys(s.answers || {});
+  document.getElementById("board").innerText =
+    names.length ? "Teilnehmer: " + names.join(" | ") : "";
+}, 1000);
+</script>
+</body>
+</html>
 
